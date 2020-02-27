@@ -1,0 +1,6 @@
+<h3> I am server component</h3> 
+ <p [ngClass]="{ online: serverStatus === 'online' }">Server with ID  {{ serverId }} is {{ serverStatus }} 
+    <span *ngIf=" serverStatus === 'online'">[ngClass]</span>     
+</p>
+<!-- U can call even METHOD between {{ and }}  but the method has to return a string! -->
+<p [ngStyle]=" { backgroundColor: getColor() } ">Server with ID  {{ serverId }} is {{ getServerStatus() }} [ngStyle] using</p>

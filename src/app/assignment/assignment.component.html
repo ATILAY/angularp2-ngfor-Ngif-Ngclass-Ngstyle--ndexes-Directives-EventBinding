@@ -1,0 +1,19 @@
+<p>assignment works!</p>
+<!-- <button 
+ (click)=" showSecret = !showSecret " 
+class="btn btn-primary">Display Details</button> -->
+<button 
+ (click)=" onToggleDetails() " 
+class="btn btn-primary">Display Details</button>
+<p *ngIf="showSecret">Secret password = alex</p>
+<div  
+ class="text-center"
+ [ngStyle]="{ backgroundColor: logItem%3 === 0 ? 'coral' : 'transparent',
+              color: i%2 === 1 ? 'red' : 'black'  
+}"  
+ [ngClass]="{ 'white-text': logItem%3 === 0 }" 
+*ngFor="let logItem of log; let i=index">{{ logItem }}</div>
+
+
+
+

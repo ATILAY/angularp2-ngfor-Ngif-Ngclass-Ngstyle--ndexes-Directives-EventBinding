@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <label for="">Username</label>
+            <input [(ngModel)]="username" type="text" class="form-control">
+            <p *ngIf=" reseted; else noUser ">Your username was {{ usernameWas }} and has been reset</p>
+            <ng-template #noUser>
+                <p>No username has been created yet</p>
+            </ng-template>
+            
+            <button (click)=" resetClicked() " [disabled]="username === '' " class="btn btn-primary">Reset User</button>
+
+        </div>
+        <div class="col-md-3">
+            <app-server></app-server>
+        </div>
+        <div class="col-md-3">
+            <app-servers></app-servers>
+        </div>
+        <div class="col-md-3">
+            <app-assignment></app-assignment>
+        </div>
+    </div>
+
+</div>
